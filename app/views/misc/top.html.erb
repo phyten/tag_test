@@ -1,0 +1,17 @@
+<ul>
+  <% @tag_categories.each do |tag_category| %>
+    <li><%= tag_category.name %>
+      <ul>
+        <% tag_category.tags.each do |tag| %>
+          <li><%= tag.name %>
+            <ul>
+              <% tag.spots.each do |spot| %>
+                <li><%= spot.name %></li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
